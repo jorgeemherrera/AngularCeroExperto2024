@@ -1,13 +1,15 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 @Component({
-	selector: 'app-counter',
-	template: `
+    selector: 'app-counter',
+    template: `
 	<p>Counter: {{counter}}</p>
 	<button (click)="increaseBy(-1)">- 1</button>
 	<button (click)="resetCounter(10)">Reset</button>
 	<button (click)="increaseBy(+1)">+ 1</button>
-	`
+	`,
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 
 export class CounterComponent {

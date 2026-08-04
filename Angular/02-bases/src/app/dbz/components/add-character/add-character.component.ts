@@ -1,11 +1,13 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, ChangeDetectionStrategy } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
 import { FormGroup } from '@angular/forms';
 
 @Component({
-	selector: 'dbz-add-character',
-	templateUrl: './add-character.component.html',
-	styleUrls: ['./add-character.component.scss']
+    selector: 'dbz-add-character',
+    templateUrl: './add-character.component.html',
+    styleUrls: ['./add-character.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class AddCharacterComponent {
 	@Output()
